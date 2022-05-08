@@ -6,28 +6,35 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      raceEndTimes: []
+      raceEndTimes: '',
+      results: 0
     }
   }
   handleChange = e => {
     e.preventDefault();
     this.setState({ raceEndTimes: e.target.value})
   }
+  
   handleSubmit = e => {
     e.preventDefault();
-    calcTotalTime(this.state.raceEndTimes)
+    // if(this.state.raceEndTimes !==)
+    this.setState({ results: calcTotalTime(this.state.raceEndTimes)})
+    this.clearInput();
+  }
+  
+  clearInput = () => {
+    this.setState({ raceEndTimes: '' })
   }
 
-
   render() {
-    const results = this.state.raceEndTimes.length > 0 ? <p>{this.state.raceEndTimes}</p> : null
+    const displayEndTimes = this.state.results ? <p className='display-results'>The average race time was {this.state.results} minutes</p> : null
     return (
       <div className="App">
         <header className="App-header">
           <object data="logo.svg" width="43" height="42" aria-labelledby='logo'></object>
         </header>
         <main className='racing-form'>
-          <label classname='race-time-box'>Race Time</label>
+          <label className='race-time-box'>Race Time</label>
           <form>
             <input
               className='input-box'
@@ -39,7 +46,7 @@ class App extends Component {
             <button onClick={e => this.handleSubmit(e)}>Submit</button>
             <hr />
             <label className='results'>Results</label>
-            {results}
+            {displayEndTimes}
           </form>
         </main>
       </div>
