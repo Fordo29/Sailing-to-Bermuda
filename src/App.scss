@@ -1,0 +1,49 @@
+.App {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.App-header {
+  background-color: #0D3041;
+  min-height: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  width: 600px;
+  height: 67px;
+  padding-left: 15px;
+}
+
+.racing-form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #DDDEDE;
+  width: 583px;
+  height: 600px;
+  padding: 15px;
+  align-items: flex-start;
+}
+
+.race-time-box {
+  font-family: 'proximaNova';
+  color: #35383B;
+  height: 15px;
+  
+}
+
+
+hr {
+  color: #DDDEDE;
+  height: 1px;
+  width: 550px;
+  background-color: none;
+  // border: none;
+}
+.results {
+  font-family: 'proximaNovaB';
+  
+}
