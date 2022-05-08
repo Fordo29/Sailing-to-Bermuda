@@ -1,8 +1,9 @@
-const calcTotalTime = (endTimeArr) => {
+const calcTotalTime = (endTimeString) => {
+  const endTimeArr = endTimeString.split(/, (?=\d{2})/)
   let n = endTimeArr.length
   let daySum = 0
   let hourMinSum = 0
-  const results = endTimeArr.map(endtime => {
+  endTimeArr.forEach(endtime => {
     const updateEndTime = endtime.split(', ')
     
     // day
@@ -21,7 +22,7 @@ const calcTotalTime = (endTimeArr) => {
           daySum += dayToMinute
         
       } else {
-        let dayToMinute = (dayToNumber - 1) * 1440 
+        let dayToMinute = ((dayToNumber - 1) * 1440)
         daySum += dayToMinute
       }      
     }
