@@ -31,19 +31,21 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <object data="logo.svg" width="43" height="42" aria-labelledby='logo'></object>
+          <object data="logo.svg" width="35" height="40" aria-labelledby='logo'></object>
         </header>
         <main className='racing-form'>
           <label className='race-time-box'>Race Time</label>
-          <form>
-            <input
-              className='input-box'
-              type='text'
-              placeholder='Enter race end times'
-              value={this.state.raceEndTimes}
-              onChange={e => this.handleChange(e)}
-            />
-            <button onClick={e => this.handleSubmit(e)}>Submit</button>
+          <form className='form'>
+            <div>
+              <input
+                className='input-box'
+                type='text'
+                // placeholder='Enter race end times'
+                value={this.state.raceEndTimes}
+                onChange={e => this.handleChange(e)}
+              />
+              <button onClick={e => this.handleSubmit(e)}>Submit</button>
+            </div>
             <hr />
             <label className='results'>Results</label>
             {displayEndTimes}
