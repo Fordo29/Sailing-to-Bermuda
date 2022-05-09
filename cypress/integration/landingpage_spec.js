@@ -16,4 +16,10 @@ describe('Landing page user flow', () => {
     cy.get('.display-results').contains('The average race time was 27239 minutes')
   })
 
+  it('should show an error message if the user types the incorrect format for the input', () => {
+    cy.get('.input-box').should('be.visible').type('kjd;alkjf;dlk')
+    cy.get('button').contains('Submit').click()
+    cy.get('.display-error').contains('You have entered your race times incorrectly. Please try again.')
+  })
+
 })
