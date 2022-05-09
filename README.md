@@ -1,4 +1,4 @@
-# sailing-to-bermuda
+# Sailing to Bermuda
 
 Welcome to race calculator to beat all other race calculators! This is an application that will calculate the total average amount of minutes that all racers took to complete the race. 
 
