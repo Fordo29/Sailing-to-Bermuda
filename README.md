@@ -32,7 +32,6 @@ The average race time is displayed below in the results section.
 
 ## FUTURE FEATURES
 A feature to toggle between light and dark mode for this application. 
-Add error handling for when a user enters completely wrong information. 
 
 ## TECHNOLOGIES USED 
 
