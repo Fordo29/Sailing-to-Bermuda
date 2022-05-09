@@ -48,7 +48,7 @@ class App extends Component {
 
   render() {
     const displayEndTimes = this.state.results ? <p className='display-results'>The average race time was {this.state.results} minutes</p> : null
-    const displayError = this.state.error ? <p>You have entered your race times incorrectly.  Please try again.</p> : null
+    const displayError = this.state.error ? <p className='display-error'>You have entered your race times incorrectly.  Please try again.</p> : null
     return (
       <div className="App">
         <header className="App-header">
