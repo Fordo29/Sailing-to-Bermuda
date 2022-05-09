@@ -59,7 +59,7 @@ Add error handling for when a user enters completely wrong information.
 
 #### Project Links
 - [Project Board](https://github.com/Fordo29/sailing-to-bermuda/projects/1)
-- [Wireframe](https://app.abstract.com/share/e29956ba-1198-465a-ae0b-0088002a1f4a?collectionId=cf3e1843-7447-4dc4-b0d6-09cc9ce2540b&collectionLayerId=829f28fe-2412-402e-b5e0-cc2226816497&present=true&preview=false&sha=b1723bf5f93dce126b9fe3bf38362e29f313c8fc)
+- [Wireframe Provided](https://app.abstract.com/share/e29956ba-1198-465a-ae0b-0088002a1f4a?collectionId=cf3e1843-7447-4dc4-b0d6-09cc9ce2540b&collectionLayerId=829f28fe-2412-402e-b5e0-cc2226816497&present=true&preview=false&sha=b1723bf5f93dce126b9fe3bf38362e29f313c8fc)
 
 #### AUTHOR:
 - Christine Rowland: 
