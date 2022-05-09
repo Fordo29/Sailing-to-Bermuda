@@ -2,7 +2,7 @@
 
 Welcome to race calculator to beat all other race calculators! This is an application that will calculate the total average amount of minutes that all racers took to complete the race. 
 
-Project Spec is [here](https://gist.github.com/mathesond2/c4c74a86645442f0e3f378d3b06a41e1)
+Project Spec is [here](https://gist.github.com/mathesond2/c4c74a86645442f0e3f378d3b06a41e1)  
 Deployed site is [here](https://bitly-sailing-to-bermuda.herokuapp.com/)
 
 ## TABLE OF CONTENTS
