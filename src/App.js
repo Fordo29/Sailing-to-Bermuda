@@ -7,7 +7,8 @@ class App extends Component {
     super();
     this.state = {
       raceEndTimes: '',
-      results: 0
+      results: 0,
+      error: ''
     }
   }
   handleChange = e => {
@@ -17,8 +18,19 @@ class App extends Component {
   
   handleSubmit = e => {
     e.preventDefault();
-    // if(this.state.raceEndTimes !==)
-    this.setState({ results: calcTotalTime(this.state.raceEndTimes)})
+
+    let regex = new RegExp(/(0?[1-9]|1[0-2]):([0-5]\d)\s((?:A|P)\.?M\.?),\s\Day\s\d{1,2}/gi)
+    const stringSplit = this.state.raceEndTimes.split(/, (?=\d{2})/)
+    stringSplit.forEach(endTime => {
+      if (regex.test(endTime) === false) {
+        this.clearResults();
+        this.setState({ error: 'You have entered your race times incorrectly.  Please try again.'})
+      } else {
+        this.clearError();
+        this.setState({ results: calcTotalTime(this.state.raceEndTimes)})
+      }
+    })
+
     this.clearInput();
   }
   
@@ -26,8 +38,17 @@ class App extends Component {
     this.setState({ raceEndTimes: '' })
   }
 
+  clearError = () => {
+    this.setState({ error: '' })
+  }
+
+  clearResults = () => {
+    this.setState({ results: 0 })
+  }
+
   render() {
     const displayEndTimes = this.state.results ? <p className='display-results'>The average race time was {this.state.results} minutes</p> : null
+    const displayError = this.state.error ? <p className='display-error'>You have entered your race times incorrectly.  Please try again.</p> : null
     return (
       <div className="App">
         <header className="App-header">
@@ -40,12 +61,12 @@ class App extends Component {
               <input
                 className='input-box'
                 type='text'
-                // placeholder='Enter race end times'
                 value={this.state.raceEndTimes}
                 onChange={e => this.handleChange(e)}
               />
               <button onClick={e => this.handleSubmit(e)}>Submit</button>
             </div>
+            {displayError}
             <hr />
             <label className='results'>Results</label>
             {displayEndTimes}
